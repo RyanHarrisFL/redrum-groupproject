@@ -6,28 +6,326 @@
         <h2>This is our Home Page!</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" class="form-control user-input" aria-describedby="first-name" placeholder="First Name">
+          </div>
+            <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" class="form-control user-input" aria-describedby="last-name" placeholder="Last Name">
+          </div>
+            <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" class="form-control user-input" aria-describedby="city" placeholder="City">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="state">State</label><br>
+            <select id="state" class="user-input" name="state">
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="DC">DC</option>
+              <option selected="selected" value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+            </select>
           </div>
+          <div class="form-group">
+            <label for="gender">Gender</label><br>
+            <select id="gender" class="user-input" name="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            </select>
+          </div>
+            <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" class="form-control user-input" aria-describedby="age-range" placeholder="Age">
+          </div>
+            <div class="form-group">
+            <label for="photo">Photograph</label>
+            <input type="text" id="photo" class="form-control user-input" aria-describedby="photo" placeholder="Link to Current Photograph">
+          </div>
+            <div class="form-group">
+            <label for="zip-code">Zip Code</label>
+            <input type="number" id="zip-code" class="form-control user-input" aria-describedby="zip-code" placeholder="Zip Code">
+          </div>
+
+        <div class="form-check form-group">
+          <label for="activity">Activity and Skill Level</label><br>
+          <input id="biking" class="form-check-input activity-choice" type="checkbox" value="biking" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Biking
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="biking-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "biking-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "biking-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "biking-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="yoga" class="form-check-input activity-choice" type="checkbox" value="yoga" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Yoga
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="yoga-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "yoga-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "yoga-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "yoga-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="surfing" class="form-check-input activity-choice" type="checkbox" value="surf" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Surfing
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="surf-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "surf-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "surf-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "surf-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="weightlifting" class="form-check-input activity-choice" type="checkbox" value="weights" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Weightlifting
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="weights-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "weights-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "weights-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "weights-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="volleyball" class="form-check-input activity-choice" type="checkbox" value="volleyball" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Volleyball
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="volleyball-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "volleyball-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "volleyball-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "volleyball-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="basketball" class="form-check-input activity-choice" type="checkbox" value="basketball" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Basketball
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="basketball-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "basketball-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "basketball-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "basketball-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="swimming" class="form-check-input activity-choice" type="checkbox" value="swimming" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Swimming
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="swimming-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "swimming-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "swimming-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "swimming-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="rollerblading" class="form-check-input activity-choice" type="checkbox" value="rollerblading" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Rollerblading
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="rollerblading-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "rollerblading-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "rollerblading-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "rollerblading-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="tennis" class="form-check-input activity-choice" type="checkbox" value="tennis" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Tennis
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="tennis-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "tennis-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "tennis-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "tennis-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
+        <div class="form-check">
+          <input id="mma" class="form-check-input activity-choice" type="checkbox" value="mma" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            MMA
+          </label>
+              <div class="form-check form-check-inline">
+                <input id="mma-skill-beg" class="form-check-input activity-choice" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label" for="skill-beginner">Beginner</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "mma-skill-int" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label" for="skill-intermediate">Intermediate</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "mma-skill-exp" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label" for="skill-expert">Expert</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input "mma-skill-pro" class="form-check-input activity-skill" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4">
+                <label class="form-check-label" for="skill-pro">Pro</label>
+              </div>
+        </div>
+
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
