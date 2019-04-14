@@ -4,7 +4,7 @@ var exphbs = require("express-handlebars");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
-
+var multer = require("multer");
 var db = require("./models");
 
 var app = express();
@@ -14,6 +14,16 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+//middleware for using Multer for the image upload
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('dev'));
+
+// app.use(express.static(__dirname, 'public'));
+
+
+
+// ...save filePath to database
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
@@ -50,6 +60,18 @@ db.sequelize.sync(syncOptions).then(function() {
       PORT
     );
   });
+});
+
+//a part of the setup for the image upload
+var storage = multer.diskStorage({
+  destination: 'some-destination',
+  filename: function (req, file, callback) {
+    crypto.pseudoRandomBytes(16, function(err, raw) {
+      if (err) return callback(err);
+    
+      callback(null, raw.toString('hex') + path.extname(file.originalname));
+    });
+  }
 });
 
 module.exports = app;

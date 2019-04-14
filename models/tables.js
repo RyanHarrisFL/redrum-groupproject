@@ -1,7 +1,9 @@
-// var Sequelize = require(&quot;sequelize&quot;);
+
+
 module.exports = function(Sequelize, DataTypes) {
   var Tableone = Sequelize.define("Tableone", {
     
+
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     state: DataTypes.STRING,
