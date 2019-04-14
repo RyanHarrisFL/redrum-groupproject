@@ -1,4 +1,4 @@
-// var Sequelize = require(&quot;sequelize&quot;);
+
 
 module.exports = function(sequelize, DataTypes) {
   var Tableone = sequelize.define("Tableone", {

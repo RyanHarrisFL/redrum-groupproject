@@ -1,5 +1,8 @@
 var db = require("../models");
 var passport = require("../config/passport");
+var host = req.host;
+var filePath = req.protocol + "://" + host + '/' + req.file.path;
+
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -92,4 +95,20 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+  app.post('/', upload.single('avatar'), (req, res) => {
+    if (!req.file) {
+      console.log("No file received");
+      return res.send({
+        success: false
+      });
+  
+    } else {
+      console.log('file received');
+      return res.send({
+        success: true
+      });
+    }
+  });
+
 };
