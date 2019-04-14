@@ -12,7 +12,9 @@ module.exports = function(Sequelize, DataTypes) {
     gender: DataTypes.STRING,
     age: DataTypes.INTEGER,
     zip: DataTypes.INTEGER
-
+  },
+{
+  freezeTableName: true
   });
   return Tableone;
 };
