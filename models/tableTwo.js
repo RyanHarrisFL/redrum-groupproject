@@ -1,14 +1,8 @@
-// module.exports = function(sequelize, DataTypes) {
-//     var tableTwo = sequelize.define("TableTwo", {
-      
-//       date: sequelize.DATE(6),
-//       time: sequelize.STRING,
-//       startTime: sequelize.INTEGER,
-//       place: sequelize.STRING,
-//       city: sequelize.STRING,
-//       address: sequelize.STRING, 
-//       zip: sequelize.INTEGER
+module.exports = function(sequelize, DataTypes) {
+    var Example = sequelize.define("Example", {
+      text: DataTypes.STRING,
+      description: DataTypes.TEXT
+    });
+    return Example;
+  };
   
-//     });
-//     return tableTwo;
-//   };

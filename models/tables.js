@@ -1,8 +1,8 @@
 // var Sequelize = require(&quot;sequelize&quot;);
-module.exports = function(Sequelize, DataTypes) {
-  var tableOne = Sequelize.define("tableOne", {
-    
-    id: DataTypes.STRING,
+
+module.exports = function(sequelize, DataTypes) {
+  var Tableone = sequelize.define("Tableone", {
+
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     state: DataTypes.STRING,
@@ -15,10 +15,10 @@ module.exports = function(Sequelize, DataTypes) {
     zip: DataTypes.INTEGER
 
   });
-  return tableOne;
-  
+  return Tableone;
+  console.log("This is table one" + Tableone);
 };
-console.log(tableOne);
+
 
 
 
