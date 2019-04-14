@@ -35,26 +35,6 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-  // Route for creating profile. 
-  app.get("/api/members", function(req, res){
-    console.log(req.body);
-    db.Tableone.create({
-        firstName: DataTypes.STRING,
-        lastName: DataTypes.STRING,
-        state: DataTypes.STRING,
-        city: DataTypes.STRING,
-        skillLevel: DataTypes.STRING,
-        activityType: DataTypes.STRING, 
-        photoUpload: DataTypes.STRING,
-        gender: DataTypes.STRING,
-        ageRange: DataTypes.STRING,
-        zip: DataTypes.INTEGER
-    }).then(function(dbTableone) {
-      res.json(dbTableone);
-    });
-  });
-
-
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
@@ -70,7 +50,6 @@ module.exports = function(app) {
       });
     }
   });
-
 
   // Get all examples
   app.get("/api/examples", function(req, res) {
@@ -92,4 +71,22 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+// Route for creating profile. 
+app.post("/api/profile", function(req, res){
+  console.log(req.body);
+  db.Tableone.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      state: req.body.state,
+      city: req.body.city,
+      photoUpload: req.body.photoUpload,
+      gender: req.body.gender,
+      age: req.body.age,
+      zip: req.body.zip
+  }).then(function(dbTableone) {
+    res.json(dbTableone);
+  });
+});  
+
 };
