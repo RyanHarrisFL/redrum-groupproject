@@ -1,7 +1,7 @@
 var db = require("../models");
 var passport = require("../config/passport");
-var host = req.host;
-var filePath = req.protocol + "://" + host + '/' + req.file.path;
+//var host = req.host;
+// var filePath = req.protocol + "://" + host + '/' + req.file.path;
 
 
 module.exports = function(app) {
@@ -68,6 +68,36 @@ module.exports = function(app) {
     });
   });
 
+  // Route for creating profile. 
+  app.post("/api/profile", function(req, res){
+    db.Tableone.create(req.body).then(function(dbTableone) {
+      res.json(dbTableone);
+    });
+  }); 
+
+
+  // Route for creating post. 
+  app.post("/api/post", function(req, res){
+    db.Post.create(req.body).then(function(dbPost) {
+      res.json(dbPost);
+    });
+  }); 
+
+  // Route for creating Activity Skill Level. 
+  app.post("/api/message", function(req, res){
+    db.Message.create(req.body).then(function(dbMessage) {
+      res.json(dbMessage);
+    });
+  }); 
+
+  // Route for creating Activity Skill Level. 
+  app.post("/api/activity", function(req, res){
+    db.Activity.create(req.body).then(function(dbActivity) {
+      res.json(dbActivity);
+    });
+  }); 
+
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
@@ -75,7 +105,7 @@ module.exports = function(app) {
     });
   });
 
-
+  /*
   app.post('/', upload.single('avatar'), (req, res) => {
     if (!req.file) {
       console.log("No file received");
@@ -90,23 +120,8 @@ module.exports = function(app) {
       });
     }
   });
-
-// Route for creating profile. 
-app.post("/api/profile", function(req, res){
-  console.log(req.body);
-  db.Tableone.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      state: req.body.state,
-      city: req.body.city,
-      photoUpload: req.body.photoUpload,
-      gender: req.body.gender,
-      age: req.body.age,
-      zip: req.body.zip
-  }).then(function(dbTableone) {
-    res.json(dbTableone);
-  });
-});  
+  */
+   
 
 
 };

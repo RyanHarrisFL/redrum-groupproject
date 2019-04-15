@@ -4,7 +4,7 @@ var exphbs = require("express-handlebars");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
-var multer = require("multer");
+//var multer = require("multer");
 var db = require("./models");
 
 var app = express();
@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 //middleware for using Multer for the image upload
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(morgan('dev'));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({extended: true}));
+//app.use(morgan('dev'));
 
 // app.use(express.static(__dirname, 'public'));
 
@@ -40,8 +40,8 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 var syncOptions = { force: false };
 
@@ -62,6 +62,7 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
+/*
 //a part of the setup for the image upload
 var storage = multer.diskStorage({
   destination: 'some-destination',
@@ -73,5 +74,5 @@ var storage = multer.diskStorage({
     });
   }
 });
-
+*/
 module.exports = app;
