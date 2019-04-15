@@ -4,9 +4,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Profile Page</title>
-      
+      <title>Search Page</title>
+      <script src="js/Initialization.js"></script>
+ 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  
       <link rel="stylesheet" href="stylesheets/search.css">
 </head>
 <body>
@@ -155,13 +157,37 @@
                                     <input type="number" class="form-control" id="searchZip-input" placeholder="Zip Code">
                         </div>
 
+                        <div class="link">
+                                    <button type="button">Submit</button>
+                        </div>
 
+                        <div class="searchPost">
+                                    <h4 class="postsLabel for="posts">
+                                                Posts:
+                                    </h4>
+                        </div>
 
                   </p>
+
+                  <ul class="collapsible">
+                              <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                              </li>
+                              <li>
+                                <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                              </li>
+                              <li>
+                                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                              </li>
+                  </ul>
+
+
+
             </div>
-            <div class="link">
-                  <button type="button">Submit</button>
-            </div>
+            
       </div>
       <!-- <div class="img">
             <img src="assets/images/dwyanewadeap970.jpg" alt="">
