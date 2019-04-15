@@ -27,6 +27,7 @@ module.exports = function(app) {
     res.json("/members");
   });
 
+
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -40,10 +41,11 @@ module.exports = function(app) {
     }).catch(function(err) {
       console.log(err);
       res.json(err);
-      // res.status(422).json(err.errors[0].message);
     });
   });
 
+
+  // Route for displaying the user Profile
   app.get("/api/users/:email", function(req, res) {
     db.User.findOne({
       where: {
@@ -55,6 +57,31 @@ module.exports = function(app) {
       res.json(dbUser);
     });
   });
+
+
+// This route returns all of the post queries
+  app.get("/api/post/all", function(req, res) {
+    Post.findAll({
+      include: [db.User],
+      include: [db.Tables],
+      include: [db.Activity]
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+  app.delete("/api/post/:id", function(req, res) {
+    db.Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbAuthor) {
+      res.json(dbAuthor);
+    });
+  });
+
+
+
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
@@ -78,12 +105,6 @@ module.exports = function(app) {
     }
   });
 
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
 
 
   // Route for creating profile. 
@@ -129,8 +150,5 @@ module.exports = function(app) {
       });
     }
   });
-
-   
-
 
 };
