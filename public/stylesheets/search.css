@@ -9,6 +9,16 @@ body {
     background: #fff;
 }
 
+.searchPost {
+    position: relative;
+    bottom: -50px;
+}
+
+.collapsible {
+    position: relative;
+    bottom: -50px;
+}
+
 /* .temp {
     position: absolute;
     width: 100%;
@@ -196,13 +206,13 @@ body {
     font-weight: bolder;
     font-size: 50px;
     Position: relative;
-    bottom: -50px;
+    bottom: -150px;
 }
 
 .desc {
     font-family: Arial, Helvetica, sans-serif;
     position: relative; 
-    bottom: -40px;
+    bottom: -160px;
 }
 
 .desc p {
