@@ -44,6 +44,18 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/users/:email", function(req, res) {
+    db.User.findOne({
+      where: {
+        email: req.params.email
+      },
+      include: [db.Tables],
+      include: [db.Activity]
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
@@ -73,12 +85,6 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
 
   // Route for creating profile. 
   app.post("/api/profile", function(req, res){
@@ -95,7 +101,7 @@ module.exports = function(app) {
     });
   }); 
 
-  // Route for creating Activity Skill Level. 
+  // Route for creating DM 
   app.post("/api/message", function(req, res){
     db.Message.create(req.body).then(function(dbMessage) {
       res.json(dbMessage);
@@ -108,15 +114,6 @@ module.exports = function(app) {
       res.json(dbActivity);
     });
   }); 
-
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
-
   
   app.post('/', upload.single('avatar'), function(req, res) {
     if (!req.file) {
