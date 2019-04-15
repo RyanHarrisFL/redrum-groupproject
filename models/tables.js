@@ -2,8 +2,6 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Tableone = sequelize.define("Tableone", {
-    
-
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     state: DataTypes.STRING,
