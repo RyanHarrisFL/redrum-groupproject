@@ -26,6 +26,14 @@ form.login {
   filter: blur(10px);
 }
 
+#state {
+  color: gray;
+}
+
+#gender{
+  color: gray;
+}
+
 
 h2 {
   color: white;
