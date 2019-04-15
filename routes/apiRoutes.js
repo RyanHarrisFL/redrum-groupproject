@@ -70,34 +70,33 @@ module.exports = function(app) {
 
   // Route for creating profile. 
   app.post("/api/profile", function(req, res){
-    db.Tableone.create({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        state: req.body.state,
-        city: req.body.city,
-        photoUpload: req.body.photoUpload,
-        gender: req.body.gender,
-        age: req.body.age,
-        zip: req.body.zip
-    }).then(function(dbTableone) {
+    db.Tableone.create(req.body).then(function(dbTableone) {
       res.json(dbTableone);
     });
   }); 
 
+
   // Route for creating post. 
   app.post("/api/post", function(req, res){
-    db.Post.create({
-        CreateDate: req.body.CreateDate,
-        timePeriod: req.body.timePeriod,
-        StartTime: req.body.StartTime,
-        location: req.body.location,
-        address: req.body.address,
-        city: req.body.city,
-        zip: req.body.zip
-    }).then(function(dbPost) {
+    db.Post.create(req.body).then(function(dbPost) {
       res.json(dbPost);
     });
   }); 
+
+  // Route for creating Activity Skill Level. 
+  app.post("/api/message", function(req, res){
+    db.Message.create(req.body).then(function(dbMessage) {
+      res.json(dbMessage);
+    });
+  }); 
+
+  // Route for creating Activity Skill Level. 
+  app.post("/api/activity", function(req, res){
+    db.Activity.create(req.body).then(function(dbActivity) {
+      res.json(dbActivity);
+    });
+  }); 
+
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
