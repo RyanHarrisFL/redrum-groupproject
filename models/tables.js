@@ -1,7 +1,7 @@
 
 
-module.exports = function(Sequelize, DataTypes) {
-  var Tableone = Sequelize.define("Tableone", {
+module.exports = function(sequelize, DataTypes) {
+  var Tableone = sequelize.define("Tableone", {
     
 
     firstName: DataTypes.STRING,
