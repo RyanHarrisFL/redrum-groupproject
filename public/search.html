@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Profile Page</title>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <link rel="stylesheet" href="stylesheets/search.css">
+</head>
+<body>
+      <div class="temp"></div>
+      <div class="first-block"></div>
+      <div class="second-block"></div>
+      <div class="loader">
+            <ul>
+                  <li>S</li>
+                  <li>E</li>
+                  <li>A</li>
+                  <li>R</li>
+                  <li>C</li>
+                  <li>H</li>
+                  <!-- <li>E</li> -->
+            </ul>
+      </div>
+      <!-- <div class="third-block"></div>
+      <div class="menu">
+            <ion-icon name="menu"></ion-icon>
+      </div> -->
+      <div class="logo">
+            <span>JumpIN</span>
+      </div>
+      <div class="content">
+            <div class="heading">
+                  <span>Search for an activity below</span>
+            </div>
+            <div class="desc">
+                  <p>Recent Posts: </p>
+            </div>
+            <div class="link">
+                  <button type="button">Submit</button>
+            </div>
+      </div>
+      <!-- <div class="img">
+            <img src="assets/images/dwyanewadeap970.jpg" alt="">
+      </div> -->
+     
+      <div class="watch">
+            <ion-icon name="play"></ion-icon>
+      </div>
+
+      <script type="text/javascript">
+
+      TweenMax.from(".logo", 1.6, {
+            delay: 2.0,
+            opacity: 0,
+            y: 30,
+            ease: Expo.easeInOut
+      });
+
+    //   TweenMax.from(".menu", 1.6, {
+    //         delay: 6.5,
+    //         opacity: 0,
+    //         y: 30,
+    //         ease: Expo.easeInOut
+    //   });
+
+      TweenMax.from(".heading", 1.6, {
+            delay: 3.6,
+            opacity: 0,
+            y: 30,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".desc", 1.6, {
+            delay: 3.7,
+            opacity: 0,
+            y: 30,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from("button", 1.6, {
+            delay: 3.8,
+            opacity: 0,
+            y: 30,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".watch", 1.6, {
+            delay: 3.9,
+            opacity: 0,
+            y: 30,
+            rotation: 90,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(".media ul li", 2, {
+            delay: 4,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      }, 0.2);
+
+      </script>
+</body>
+</html>
