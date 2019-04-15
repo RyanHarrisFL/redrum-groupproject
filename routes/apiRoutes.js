@@ -1,8 +1,20 @@
 var db = require("../models");
 var passport = require("../config/passport");
+var multer = require("multer");
+var upload = multer();
 //var host = req.host;
 // var filePath = req.protocol + "://" + host + '/' + req.file.path;
-
+//a part of the setup for the image upload
+var storage = multer.diskStorage({
+  destination: '../public/assets/images',
+  filename: function (req, file, callback) {
+    crypto.pseudoRandomBytes(16, function(err, raw) {
+      if (err) return callback(err);
+    
+      callback(null, raw.toString('hex') + path.extname(file.originalname));
+    });
+  }
+});
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -105,8 +117,8 @@ module.exports = function(app) {
     });
   });
 
-  /*
-  app.post('/', upload.single('avatar'), (req, res) => {
+  
+  app.post('/', upload.single('avatar'), function(req, res) {
     if (!req.file) {
       console.log("No file received");
       return res.send({
@@ -120,7 +132,7 @@ module.exports = function(app) {
       });
     }
   });
-  */
+
    
 
 
