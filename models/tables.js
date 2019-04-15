@@ -14,6 +14,13 @@ module.exports = function(sequelize, DataTypes) {
 {
   freezeTableName: true
   });
+  Tableone.associate = function(models) {
+    Tableone.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Tableone;
 };
 
