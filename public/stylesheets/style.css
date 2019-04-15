@@ -2,3 +2,67 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.bgDiv{
+  background: url(https://evofitness.ch/wp-content/uploads/2018/10/Triathlon-EVO-Fitness.jpg);
+  
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+
+
+h2 {
+  color: white;
+  font: Helvetica;
+  font-size: 100px;
+  align-content: center;
+  font-weight: bold;
+  position: relative;
+  right: -115px;
+  bottom: -80px;
+  
+}
+
+.formdiv{
+  color: white;
+  font: Helvetica;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+.email {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+ 
+}
+
+.password {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.orsignup {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.btn-default {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
