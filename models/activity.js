@@ -25,5 +25,12 @@ module.exports = function(sequelize, DataTypes) {
     {
       freezeTableName: true
     });
+    Activity.associate = function(models) {
+      Activity.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
     return Activity;
   };
