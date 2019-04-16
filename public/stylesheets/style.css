@@ -1,5 +1,6 @@
 
 
+
 /* signup.html and login.html are using this css file. */
 
 
@@ -7,6 +8,7 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
 
 .bgDiv{
   background: url(https://evofitness.ch/wp-content/uploads/2018/10/Triathlon-EVO-Fitness.jpg);

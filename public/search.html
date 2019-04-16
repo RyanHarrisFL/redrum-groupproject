@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Search Page</title>
-      <script src="js/Initialization.js"></script>
- 
+      <script src="https://code.jquery.com/jquery-3.4.0.js"
+            integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-  
+      <script src="js/search.js"></script>
       <link rel="stylesheet" href="stylesheets/search.css">
 </head>
+
 <body>
       <div class="temp"></div>
       <div class="first-block"></div>
@@ -42,13 +45,13 @@
                         <!-- <div class="form-check form-group">
                               <label for="activity">Pick an Activity: </label><br>
                         </div> -->
-                        <div class="form"> 
-                              <form>
-                                    <input type="text" placeholder="Activity">
-                                    <input type="text" placeholder="Skill Level">
-                                    <input type="text" placeholder="Time">
-                                    <input type="text" placeholder="City">
-                                    <input type="text" placeholder="Zip">
+                        <div class="form">
+                              <form id="inputFormSearch">
+                                    <input type="text" id="inputActivity" placeholder="Activity">
+                                    <input type="text" id="inputSkill" placeholder="Skill Level">
+                                    <input type="text" id="inputTime" placeholder="Time">
+                                    <input type="text" id="inputCity" placeholder="City">
+                                    <input type="text" id="inputZip" placeholder="Zip">
                               </form>
 
                         </div>
@@ -168,44 +171,44 @@
                         </div> -->
 
                         <div class="link">
-                                    <button type="button">Submit</button>
+                              <button type="button" id="searchSubmit">Submit</button>
                         </div>
 
                         <div class="searchPost">
-                                    <h4 class="postsLabel for="posts">
-                                                Recent Posts
-                                    </h4>
+                              <h4 class="postsLabel for=" posts">
+                                    Results
+                              </h4>
 
-                                    <table class="tablePost">
-                                                <tr>
-                                                  <th>Activity</th>
-                                                  <th>Skill Level</th> 
-                                                  <th>Time</th>
-                                                  <th>City</th>
-                                                  <th>Zip</th>
-                                                </tr>
-                                                <tr>
-                                                  <td>Basketball</td>
-                                                  <td>Intermediate</td>
-                                                  <td>Afternoon</td>
-                                                  <td>Orlando</td>
-                                                  <td>32803</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Tennis</td>
-                                                  <td>Beginner</td>
-                                                  <td>Morning</td>
-                                                  <td>Orlando</td>
-                                                  <td>32806</td>
-                                                </tr>
-                                                <tr>
-                                                  <td>Biking</td>
-                                                  <td>Expert</td>
-                                                  <td>Evening</td>
-                                                  <td>Orlando</td>
-                                                  <td>32805</td>
-                                                </tr>
-                                    </table>
+                              <table class="tablePost">
+                                    <tr>
+                                          <th>Activity</th>
+                                          <th>Skill Level</th>
+                                          <th>Time</th>
+                                          <th>City</th>
+                                          <th>Zip</th>
+                                    </tr>
+                                    <tr>
+                                          <td>Basketball</td>
+                                          <td>Intermediate</td>
+                                          <td>Afternoon</td>
+                                          <td>Orlando</td>
+                                          <td>32803</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Tennis</td>
+                                          <td>Beginner</td>
+                                          <td>Morning</td>
+                                          <td>Orlando</td>
+                                          <td>32806</td>
+                                    </tr>
+                                    <tr>
+                                          <td>Biking</td>
+                                          <td>Expert</td>
+                                          <td>Evening</td>
+                                          <td>Orlando</td>
+                                          <td>32805</td>
+                                    </tr>
+                              </table>
                         </div>
 
                   </p>
@@ -228,68 +231,67 @@
 
 
             </div>
-            
+
       </div>
       <!-- <div class="img">
             <img src="assets/images/dwyanewadeap970.jpg" alt="">
       </div> -->
-     
+
       <div class="watch">
             <ion-icon name="play"></ion-icon>
       </div>
 
       <script type="text/javascript">
+            TweenMax.from(".logo", 1.6, {
+                  delay: 2.0,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".logo", 1.6, {
-            delay: 2.0,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            //   TweenMax.from(".menu", 1.6, {
+            //         delay: 6.5,
+            //         opacity: 0,
+            //         y: 30,
+            //         ease: Expo.easeInOut
+            //   });
 
-    //   TweenMax.from(".menu", 1.6, {
-    //         delay: 6.5,
-    //         opacity: 0,
-    //         y: 30,
-    //         ease: Expo.easeInOut
-    //   });
+            TweenMax.from(".heading", 1.6, {
+                  delay: 3.6,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".heading", 1.6, {
-            delay: 3.6,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            TweenMax.from(".desc", 1.6, {
+                  delay: 3.7,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".desc", 1.6, {
-            delay: 3.7,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            TweenMax.from("button", 1.6, {
+                  delay: 3.8,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from("button", 1.6, {
-            delay: 3.8,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            TweenMax.from(".watch", 1.6, {
+                  delay: 3.9,
+                  opacity: 0,
+                  y: 30,
+                  rotation: 90,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".watch", 1.6, {
-            delay: 3.9,
-            opacity: 0,
-            y: 30,
-            rotation: 90,
-            ease: Expo.easeInOut
-      });
-
-      TweenMax.staggerFrom(".media ul li", 2, {
-            delay: 4,
-            opacity: 0,
-            y: 40,
-            ease: Expo.easeInOut
-      }, 0.2);
-
+            TweenMax.staggerFrom(".media ul li", 2, {
+                  delay: 4,
+                  opacity: 0,
+                  y: 40,
+                  ease: Expo.easeInOut
+            }, 0.2);
       </script>
 </body>
+
 </html>
