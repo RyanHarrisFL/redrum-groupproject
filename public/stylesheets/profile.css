@@ -204,6 +204,11 @@ button {
     color: #fff;
 }
 
+a {
+    text-decoration-line: none;
+    color: #fff;
+}
+
 .img img {
     width: 440px;
 }
