@@ -42,7 +42,7 @@
                   <input type="text" id="last-name" class="form-control user-input" aria-describedby="last-name" placeholder="Last Name">
                 </div>
                 <div class="form-group">
-                    <label for="last-name">Profile Status</label>
+                    <label for="profileStatus">Profile Status</label>
                     <input type="text" id="profileStatus" class="form-control user-input" aria-describedby="profile-status" placeholder="What are you looking to do here?">
                   </div>
                   <div class="form-group">
@@ -149,11 +149,10 @@
               
 
               <div class="form-check">
-              <input id="yoga" class="form-check-input activity-choice" type="checkbox" value="yoga" id="defaultCheck1">
+                <input id="biking" class="form-check-input activity-choice" type="checkbox" value="biking" id="defaultCheck1">
                 <label class="form-check-label" for="defaultCheck1">
                   Biking
                 </label>
-              </div>
       
               <div class="form-check">
                 <input id="yoga" class="form-check-input activity-choice" type="checkbox" value="yoga" id="defaultCheck1">
@@ -368,7 +367,7 @@
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span> <span class="msg"></span>
           </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
+          <button type="submit" class="btn btn-default" id = "signUpSubmit-btn">Sign Up</button>
         </form>
         <br />
         <p>Or log in <a href="/login">here</a></p>
