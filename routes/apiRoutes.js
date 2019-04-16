@@ -151,12 +151,15 @@ module.exports = function(app) {
 	app.post('/api/updateUserInfo', function(req, res) {
 		db.Tableone.create(req.body).then(function(dbTableone) {
 			res.json(dbTableone);
+			console.log("this is from API routes" + dbTableone)
 		});
 	});
 
+	/*
 	app.post('/api/updateActivity', function(req, res) {
 		db.Tableone.create(req.body).then(function(dbActivity) {
 			res.json(dbActivity);
 		});
 	});
+	*/
 };

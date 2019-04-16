@@ -115,7 +115,7 @@ $('#signUpSubmit-btn').on('click', function(event) {
 		// On success, run the following code
 		.then(function(data) {
 			// Log the data we found
-			console.log(data);
+			console.log("This is the Ajax post data" + data);
 		});
 
 	// Empty each input box by replacing the value with an empty string
