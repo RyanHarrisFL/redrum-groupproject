@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Profile Page</title>
-      
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
       <link rel="stylesheet" href="stylesheets/profile.css">
 </head>
+
 <body>
-      <div id ="placeholder" class="container"></div>
+      <!-- creating the search transition -->
       <div class="temp"></div>
       <div class="first-block"></div>
       <div class="second-block"></div>
@@ -25,84 +27,78 @@
                   <li>E</li>
             </ul>
       </div>
-      <!-- <div class="third-block"></div>
-      <div class="menu">
-            <ion-icon name="menu"></ion-icon>
-      </div> -->
+      <!-- creating the logo -->
       <div class="logo">
             <span>JumpIN</span>
       </div>
       <div class="content">
+            <!-- heading/username -->
             <div class="heading">
                   <span>John Dinsmore</span>
             </div>
+            <!-- status/description  -->
             <div class="desc">
                   <p>I like doing Orange Theory!  That's where it's at!</p>
             </div>
             <div class="link">
-                  <button type="button"><a href = "search.html">Search For Activity</a></button>
+                  <!-- search button that redirects to the search page -->
+                  <button type="button"><a href="search.html">Search For Activity</a></button>
             </div>
       </div>
+      <!-- user photo -->
       <div class="img">
             <img src="assets/images/jon.jpg" alt="">
       </div>
-     
-      <div class="watch">
-            <ion-icon name="play"></ion-icon>
-      </div>
 
       <script type="text/javascript">
+            // // logo animation
+            TweenMax.from(".logo", 1.6, {
+                  // it takes two seconds for it to load in
+                  delay: 2.0,
+                  // opacity is zero
+                  opacity: 0,
+                  // the animation will be moving on the y axis 
+                  y: 30,
+                  // the content will ease in and out
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".logo", 1.6, {
-            delay: 2.0,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            TweenMax.from(".heading", 1.6, {
+                  delay: 3.6,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-    //   TweenMax.from(".menu", 1.6, {
-    //         delay: 6.5,
-    //         opacity: 0,
-    //         y: 30,
-    //         ease: Expo.easeInOut
-    //   });
+            TweenMax.from(".desc", 1.6, {
+                  delay: 3.7,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".heading", 1.6, {
-            delay: 3.6,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            TweenMax.from("button", 1.6, {
+                  delay: 3.8,
+                  opacity: 0,
+                  y: 30,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from(".desc", 1.6, {
-            delay: 3.7,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
+            TweenMax.from(".watch", 1.6, {
+                  delay: 3.9,
+                  opacity: 0,
+                  y: 30,
+                  rotation: 90,
+                  ease: Expo.easeInOut
+            });
 
-      TweenMax.from("button", 1.6, {
-            delay: 3.8,
-            opacity: 0,
-            y: 30,
-            ease: Expo.easeInOut
-      });
-
-      TweenMax.from(".watch", 1.6, {
-            delay: 3.9,
-            opacity: 0,
-            y: 30,
-            rotation: 90,
-            ease: Expo.easeInOut
-      });
-
-      TweenMax.staggerFrom(".media ul li", 2, {
-            delay: 4,
-            opacity: 0,
-            y: 40,
-            ease: Expo.easeInOut
-      }, 0.2);
-
+            TweenMax.staggerFrom(".media ul li", 2, {
+                  delay: 4,
+                  opacity: 0,
+                  y: 40,
+                  ease: Expo.easeInOut
+            }, 0.2);
       </script>
 </body>
+
 </html>

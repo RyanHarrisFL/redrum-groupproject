@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -19,34 +20,29 @@ body {
     bottom: -50px;
 }
 
-/* .temp {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: url(/public/assets/images/giphy.gif) no-repeat 50% 50%;
-    background-size: cover;
-    animation: fadeOut 5s linear forwards;
-    opacity: 1;
-} */
-
 @keyframes fadeOut {
     0% {
-          opacity: 0;
+        opacity: 0;
     }
+
     40% {
-          opacity: 0;
+        opacity: 0;
     }
+
     41% {
-          opacity: 1;
+        opacity: 1;
     }
+
     91% {
-          opacity: 1;
+        opacity: 1;
     }
+
     92% {
-          opacity: 0;
+        opacity: 0;
     }
+
     100% {
-          opacity: 0;
+        opacity: 0;
     }
 }
 
@@ -61,27 +57,20 @@ body {
 
 @keyframes go-left {
     0% {
-          left: 0;
-          width: 0%;
+        left: 0;
+        width: 0%;
     }
+
     50% {
-          left: 0;
-          width: 100%;
+        left: 0;
+        width: 100%;
     }
+
     100% {
-          left: 100%;
-          width: 0;
+        left: 100%;
+        width: 0;
     }
 }
-
-/* .second-block {
-    position: absolute;
-    width: 0%;
-    height: 100vh;
-    background: 02425F;
-    animation: go-left 3.2s cubic-bezier(.74, .06, .4, .92) forwards;
-    animation-delay: 3s;
-} */
 
 .loader {
     position: absolute;
@@ -111,20 +100,23 @@ body {
 
 @keyframes loadNow {
     0% {
-          opacity: 0;
-          transform: translateX(80px);
+        opacity: 0;
+        transform: translateX(80px);
     }
+
     20% {
-          opacity: 1;
-          transform: translateX(0px);
+        opacity: 1;
+        transform: translateX(0px);
     }
+
     80% {
-          opacity: 1;
-          transform: translateX(0px);
+        opacity: 1;
+        transform: translateX(0px);
     }
+
     100% {
-          opacity: 0;
-          transform: translateX(-80px);
+        opacity: 0;
+        transform: translateX(-80px);
     }
 }
 
@@ -152,42 +144,12 @@ body {
     animation-delay: 1.6s;
 }
 
-/* .loader ul li:nth-child(7) {
-    animation-delay: 1.6s;
-} */
-
-/* .third-block {
-    position: absolute;
-    width: 0%;
-    height: 100vh;
-    background: 011826;
-    animation: expandNow 1.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 6.2s;
-}
-
-@keyframes expandNow {
-    0% {
-          width: 0%;
-    }
-
-    100% {
-          width: 64%;
-    }
-} */
-
-/* .menu {
-    position: absolute;
-    right: 0;
-    margin: 2em;
-    font-size: 18px;
-} */
-
 .logo {
     position: absolute;
     left: 0;
     margin: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    
+
     font-weight: bolder;
     font-size: 18px;
 }
@@ -211,7 +173,7 @@ body {
 
 .desc {
     font-family: Arial, Helvetica, sans-serif;
-    position: relative; 
+    position: relative;
     bottom: -210px;
 }
 
@@ -255,104 +217,32 @@ input {
     font-size: 18px;
     position: relative;
     top: -50px;
-    
+
 }
 
-table, th, td {
+table,
+th,
+td {
     border-collapse: collapse;
     border: 1px solid black;
     border-spacing: 15px;
 }
 
-th, td {
+th,
+td {
     padding: 15px;
 }
 
-  
-  table#t01 tr:nth-child(even) {
+
+table#t01 tr:nth-child(even) {
     background-color: #eee;
-  }
-  table#t01 tr:nth-child(odd) {
-   background-color: #fff;
-  }
-  table#t01 th {
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table#t01 th {
     background-color: black;
     color: white;
-  }
-
-
-
-
-/* .img img {
-    width: 440px;
 }
-
-.img {
-    position: fixed;
-    z-index: 0;
-    top: 46%;
-    right: 14%;
-    transform: translateY(-50%);
-}
-
-img {
-    opacity: 0;
-    animation: appearimg 0.1s linear forwards;
-    animation-delay: 5.1s;
-}
-
-.img:after {
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: 272727;
-    position: absolute;
-    animation: rev-img 3.0s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    animation-delay: 4s;
-} */
-
-/* @keyframes rev-img {
-    0% {
-          left: 0;
-          width: 0%;
-    }
-    50% {
-          width: 440px;
-          left: 0;
-    }
-    100% {
-          left: 440px;
-          width: 0;
-    }
-}
-
-@keyframes appearimg {
-    0% {
-          opacity: 0;
-    }
-    100% {
-          opacity: 1;
-    }
-} */
-
-/* .media ul {
-    list-style: none;
-    position: fixed;
-    right: 24px;
-    bottom: 0;
-    padding: 10px;
-} */
-
-/* .media ul li {
-    font-size: 18px;
-    margin: 24px 0;
-} */
-
-/* .watch {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 2em;
-} */
