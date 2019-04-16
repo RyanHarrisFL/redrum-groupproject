@@ -1,3 +1,5 @@
+
+// Creating database for list of activities
 module.exports = function(sequelize, DataTypes) {
 	var Activity = sequelize.define(
 		'Activity',
