@@ -3,7 +3,5 @@ $(document).ready(function() {
 	// and updates the HTML on the page
 	$.get('/api/user_data').then(function(data) {
 		$('.member-name').text(data.email);
-		// $("#placeHolder").attr("data-id", data.id)
-		// $("#placeHolder").attr("data-name", data.name);
 	});
 });
