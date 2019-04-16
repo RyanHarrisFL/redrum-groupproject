@@ -31,7 +31,6 @@ module.exports = function(app) {
 	// how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
 	// otherwise send back an error
 	app.post('/api/signup', function(req, res) {
-		console.log(req.body);
 		db.User
 			.create({
 				email: req.body.email,
@@ -107,7 +106,11 @@ module.exports = function(app) {
 
 	// Route for creating profile.
 	app.post('/api/profile', function(req, res) {
-		db.Tableone.create(req.body).then(function(dbTableone) {
+		db.Tableone.create(req.body,{
+			include: [{
+			  association: db.User
+			}]
+		  }).then(function(dbTableone) {
 			res.json(dbTableone);
 		});
 	});
@@ -126,7 +129,7 @@ module.exports = function(app) {
 	//   });
 	// });
 
-	// Route for creating Activity Skill Level.
+	// Route for creating Activity.
 	app.post('/api/activity', function(req, res) {
 		db.Activity.create(req.body).then(function(dbActivity) {
 			res.json(dbActivity);
@@ -180,3 +183,7 @@ module.exports = function(app) {
 // 				// profileStatus: res.Tableone.profileStatus
 // 			});
 // 	});
+
+
+};
+

@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
 			password: {
 				type: DataTypes.STRING,
 				allowNull: false
-			}
+			},
 		},
 		{
 			freezeTableName: true
@@ -35,8 +35,14 @@ module.exports = function(sequelize, DataTypes) {
 		user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
 	});
 	User.associate = function(models) {
+		User.hasOne(models.Tableone, {
+			onDelete: "cascade"
+		  });
 		User.hasMany(models.Post, {
-		  onDelete: "cascade"
+			onDelete: "cascade"
+		  });
+		User.hasOne(models.Activity, {
+			onDelete: "cascade"
 		});
 	  };
 	return User;

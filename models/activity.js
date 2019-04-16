@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
 	Activity.associate = function(models) {
 		Activity.belongsTo(models.User, {
 			foreignKey: {
-				allowNull: false
+				allowNull: true
 			}
 		});
 	};
