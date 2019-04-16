@@ -7,9 +7,11 @@ $(document).ready(function() {
 	var searchCity = $('#inputCity');
 	var searchZip = $('#inputZip');
 
+	//when submit button ckicked on search page
 	$('#searchSubmit').on('click', function(event) {
 		event.preventDefault();
 
+		//variable capturing the information input by the user
 		var searchPost = {
 			Activity: searchActivity.val().trim(),
 			Skill: searchSkill.val().trim(),
@@ -20,20 +22,11 @@ $(document).ready(function() {
 
 		console.log(searchPost);
 
-		// searchPost.push(searchResults);
-
-		// ajax get
-		// get api route. find activity, where activity name/value 1 or 0.
-
+		//clearing the input fields back to null value on click
 		$('#inputActivity').val('');
 		$('#inputSkill').val('');
 		$('#inputTime').val('');
 		$('#inputCity').val('');
 		$('#inputZip').val('');
 	});
-
-	// for (let index = 0; index < array.length; index++) {
-	//     const element = array[index];
-
-	// }
 });
