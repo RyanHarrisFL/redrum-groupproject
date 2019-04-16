@@ -151,14 +151,17 @@ module.exports = function(app) {
 	app.post('/api/updateUserInfo', function(req, res) {
 		db.Tableone.create(req.body).then(function(dbTableone) {
 			res.json(dbTableone);
+			console.log("this is from API routes" + dbTableone)
 		});
 	});
 
+	/*
 	app.post('/api/updateActivity', function(req, res) {
 		db.Tableone.create(req.body).then(function(dbActivity) {
 			res.json(dbActivity);
 		});
 	});
+<<<<<<< HEAD
 
 	app.get('/api/user_data', function(req, res) {
 		db.Tableone
@@ -178,4 +181,7 @@ module.exports = function(app) {
 				// profileStatus: res.Tableone.profileStatus
 			});
 	});
+=======
+	*/
+>>>>>>> 872b0f42a20cb288ecf551a47a5d804c4136c029
 };
