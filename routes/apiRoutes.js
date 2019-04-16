@@ -161,27 +161,25 @@ module.exports = function(app) {
 			res.json(dbActivity);
 		});
 	});
-<<<<<<< HEAD
 
-	app.get('/api/user_data', function(req, res) {
-		db.Tableone
-			.findOne({
-				where: {
-					id: req.params.id
-				},
-				include: [ db.Tableone ]
-			})
-			.then(function() {
-				res.json(Tableone);
-				var currentUser = firstName + ' ' + lastName;
-				var currentProfileStatus = profileStatus;
 
-				// firstName: res.Tableone.firstName,
-				// lastName: res.Tableone.lastName,
-				// profileStatus: res.Tableone.profileStatus
-			});
-	});
-=======
-	*/
->>>>>>> 872b0f42a20cb288ecf551a47a5d804c4136c029
+// 	app.get('/api/user_data', function(req, res) {
+// 		db.Tableone
+// 			.findOne({
+// 				where: {
+// 					id: req.params.id
+// 				},
+// 				include: [ db.Tableone ]
+// 			})
+// 			.then(function() {
+// 				res.json(Tableone);
+// 				var currentUser = firstName + ' ' + lastName;
+// 				var currentProfileStatus = profileStatus;
+
+// 				// firstName: res.Tableone.firstName,
+// 				// lastName: res.Tableone.lastName,
+// 				// profileStatus: res.Tableone.profileStatus
+// 			});
+// 	});
+
 };
