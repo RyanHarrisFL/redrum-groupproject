@@ -1,42 +1,12 @@
 $(document).ready(function() {
 	// Getting references to our form and input
 	var signUpForm = $('form.signup');
-	var emailInput = $('input#email-input');
-	var passwordInput = $('input#password-input');
-	// var firstName = $('input#first-name');
-	// var lastName = $('input#last-name');
-	// var profileStatus = $('input#profile-status');
-	// var city = $('input#city');
-	// var state = $('input#state');
-	// var zip = $('input#zip-code');
-	// var gender = $('input#gender');
-	// var age = $('input#age');
-	// var biking = $('input#biking');
-	// var yoga = $('input#yoga');
-	// var surfing = $('input#surfing');
-	// var weightlifting = $('input#weightlifting');
-	// var volleyball = $('input#volleyball');
-	// var basketball = $('input#basketball');
-	// var swimming = $('input#swimming');
-	// var rollerblading = $('input#rollerblading');
-	// var tennis = $('input#tennis');
-	// var mma = $('input#mma');
+
 
 	// When the signup button is clicked, we validate the email and password are not blank
 	signUpForm.on('submit', function(event) {
 		event.preventDefault();
-		var userData = {
-			email: emailInput.val().trim(),
-			password: passwordInput.val().trim()
-		};
-
-		if (!userData.email || !userData.password) {
-			return;
-		}
-		// If we have an email and password, run the signUpUser function
-		signUpUser(userData.email, userData.password);
-		emailInput.val('');
-		passwordInput.val('');
+		
 	});
 
 	// Does a post to the signup route. If successful, we are redirected to the members page
@@ -61,11 +31,27 @@ $(document).ready(function() {
 	signUpForm.on('submit', function(event) {
 		event.preventDefault();
 	});
-});
+
 
 //new data added by mike
 $('#signUpSubmit-btn').on('click', function(event) {
 	event.preventDefault();
+
+	var emailInput = $('input#email-input');
+	var passwordInput = $('input#password-input');
+
+	var userData = {
+		email: emailInput.val().trim(),
+		password: passwordInput.val().trim()
+	};
+
+	if (!userData.email || !userData.password) {
+		return;
+	}
+	// If we have an email and password, run the signUpUser function
+	signUpUser(userData.email, userData.password);
+	emailInput.val('');
+	passwordInput.val('');
 
 	var userInfo = {
 		firstName: $('#first-name').val().trim(),
@@ -111,7 +97,7 @@ $('#signUpSubmit-btn').on('click', function(event) {
 	$('#age').val('');
 
 	// Send an AJAX POST-request with jQuery
-	$.post('/api/updateActivity', Activity)
+	$.post('/api/activity', Activity)
 		// On success, run the following code
 		.then(function(data) {
 			// Log the data we found
@@ -129,4 +115,6 @@ $('#signUpSubmit-btn').on('click', function(event) {
 	$('#rollerblading').val('');
 	$('#tennis').val('');
 	$('#mma').val('');
+});
+
 });
