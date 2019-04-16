@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
 	Tableone.associate = function(models) {
 		Tableone.belongsTo(models.User, {
 			foreignKey: {
-				allowNull: false
+				allowNull: true
 			}
 		});
 	};
