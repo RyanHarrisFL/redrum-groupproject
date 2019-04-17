@@ -5,16 +5,16 @@ var upload = multer();
 //var host = req.host;
 // var filePath = req.protocol + "://" + host + '/' + req.file.path;
 //a part of the setup for the image upload
-var storage = multer.diskStorage({
-  destination: "../public/assets/images",
-  filename: function(req, file, callback) {
-    crypto.pseudoRandomBytes(16, function(err, raw) {
-      if (err) return callback(err);
+// var storage = multer.diskStorage({
+//   destination: "../public/assets/images",
+//   filename: function(req, file, callback) {
+//     crypto.pseudoRandomBytes(16, function(err, raw) {
+//       if (err) return callback(err);
 
-      callback(null, raw.toString("hex") + path.extname(file.originalname));
-    });
-  }
-});
+//       callback(null, raw.toString("hex") + path.extname(file.originalname));
+//     });
+//   }
+// });
 
 module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
