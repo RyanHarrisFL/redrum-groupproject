@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "yt98xsfduzkecbxi",
-    "password": "rvvibdx4y2vlksan",
-    "database": "mppeeiu7zxir246k",
-    "host": "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "root",
+    "database": "jumpin_db",
+    "host": "local",
     "dialect": "mysql"
   },
   "test": {
